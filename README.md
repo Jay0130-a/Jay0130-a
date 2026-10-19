@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/banner.svg" width="100%" alt="luckturnflow - AI Agent Developer" />
+  <img src="./assets/banner.svg" width="100%" alt="Jay0130-a - AI Agent Developer" />
   <br />
   <a href="https://github.com/Jay0130-a">
     <img
