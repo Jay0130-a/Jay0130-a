@@ -23,6 +23,8 @@
 
 ## 开源贡献
 
+> 当前记录 13 个已合并 PR，以及近期仍在评审中的贡献。状态更新于 2026-10-19。
+
 ### 已合并
 
 | 项目 | 贡献 |
@@ -30,15 +32,18 @@
 | `Tencent/teamai-cli` | [#1034](https://github.com/Tencent/teamai-cli/pull/1034) Windows hook 改为 PowerShell 语法<br>[#1046](https://github.com/Tencent/teamai-cli/pull/1046) 统一 `getUserHome()`，消除 Git Bash / PowerShell home 差异<br>[#1058](https://github.com/Tencent/teamai-cli/pull/1058) 新增 `teamai review` 只读健康检查<br>[#870](https://github.com/Tencent/teamai-cli/pull/870) Windows 临时根目录改用长路径 |
 | `Tencent/WeKnora` | [#4374](https://github.com/Tencent/WeKnora/pull/4374) 拒绝旧版二进制 `.xls`，返回可操作错误<br>[#4425](https://github.com/Tencent/WeKnora/pull/4425) Helm data-files claim 访问模式改为可配置<br>[#4020](https://github.com/Tencent/WeKnora/pull/4020) 补齐 docreader 文本切分单测 |
 | `QwenLM/qwen-code` | [#13960](https://github.com/QwenLM/qwen-code/pull/13960) 桌面版发布说明锚定到上一个桌面版本 |
+| `bytedance/deer-flow` | [#7084](https://github.com/bytedance/deer-flow/pull/7084) DeerMem summary 可解析 UTF-8 BOM，不再误报损坏<br>[#7061](https://github.com/bytedance/deer-flow/pull/7061) `SOUL.md` 注入提示词前移除 BOM<br>[#6984](https://github.com/bytedance/deer-flow/pull/6984) `SKILL.md` 的 BOM 不再进入模型上下文与指纹<br>[#6982](https://github.com/bytedance/deer-flow/pull/6982) 补齐 skillscan 解构绑定假阴性的回归固定 |
 | `TencentCloud/octop-harness` | [#63](https://github.com/TencentCloud/octop-harness/pull/63) 子进程输出统一按 UTF-8 解码，不依赖宿主机 locale |
 
 ### 评审中
 
 | 项目 | 贡献 |
 | --- | --- |
-| `QwenLM/qwen-code` | [#14349](https://github.com/QwenLM/qwen-code/pull/14349) `/auth` 文案改为渲染期解析<br>[#13962](https://github.com/QwenLM/qwen-code/pull/13962) ripgrep 回退提示收敛为可操作文案<br>[#13932](https://github.com/QwenLM/qwen-code/pull/13932) 按 150 字符预算分配索引标题 |
-| `bytedance/deer-flow` | [#6984](https://github.com/bytedance/deer-flow/pull/6984) `SKILL.md` 的 BOM 不再进入模型上下文与指纹<br>[#6982](https://github.com/bytedance/deer-flow/pull/6982) 补齐 skillscan 解构绑定假阴性的回归固定 |
-| `TencentCloud/Octop` | [#2030](https://github.com/TencentCloud/Octop/pull/2030) Kimi 探测模型改为可配置，并改善模型退役报错 |
+| `QwenLM/qwen-code` | [#14431](https://github.com/QwenLM/qwen-code/pull/14431) 模型调用失败后不再重复提交 peer message<br>[#14349](https://github.com/QwenLM/qwen-code/pull/14349) `/auth` 文案改为渲染期解析<br>[#14077](https://github.com/QwenLM/qwen-code/pull/14077) 重建 open-PR recheck workflow 的 Git 元数据<br>[#13962](https://github.com/QwenLM/qwen-code/pull/13962) ripgrep 回退提示收敛为可操作文案<br>[#13932](https://github.com/QwenLM/qwen-code/pull/13932) 按 150 字符预算分配索引标题<br>[#13897](https://github.com/QwenLM/qwen-code/pull/13897) 拒绝已停用的 Qwen OAuth 模型选择 |
+| `bytedance/deer-flow` | [#7112](https://github.com/bytedance/deer-flow/pull/7112) 兼容运维侧 env / secret 文件的 UTF-8 BOM<br>[#7110](https://github.com/bytedance/deer-flow/pull/7110) 快照文本缓存跨宿主按字节精确发布 |
+| `TencentCloud/octop-harness` | [#81](https://github.com/TencentCloud/octop-harness/pull/81) bwrap 内绑定系统库所需的 `/etc` 路径<br>[#68](https://github.com/TencentCloud/octop-harness/pull/68) Kimi search 探测模型改为可配置<br>[#66](https://github.com/TencentCloud/octop-harness/pull/66) 将媒体指令限定到内置工具 |
+| `QwenLM/Qwen-Agent` | [#997](https://github.com/QwenLM/Qwen-Agent/pull/997) `Storage.scan` key 统一为跨平台正斜杠 |
+| `TencentCloud/Octop` | [#2179](https://github.com/TencentCloud/Octop/pull/2179) 请求或输入错误后释放半开 AUTO 探测<br>[#2105](https://github.com/TencentCloud/Octop/pull/2105) 工具开关关闭时保持媒体供应商弹窗可用<br>[#2063](https://github.com/TencentCloud/Octop/pull/2063) 不可用能力返回明确错误而非空上下文<br>[#2030](https://github.com/TencentCloud/Octop/pull/2030) Kimi 探测模型改为可配置<br>[#2029](https://github.com/TencentCloud/Octop/pull/2029) 仅在显式启用时挂载宿主 Docker socket<br>[#2026](https://github.com/TencentCloud/Octop/pull/2026) 固定内置 Web 资源的 `Content-Type`<br>[#1974](https://github.com/TencentCloud/Octop/pull/1974) gateway CLI 输出按 UTF-8 解码<br>[#1973](https://github.com/TencentCloud/Octop/pull/1973) 缓存已认证头像，避免重复请求<br>[#1972](https://github.com/TencentCloud/Octop/pull/1972) 供应商重名返回 409<br>[#1916](https://github.com/TencentCloud/Octop/pull/1916) 串行化入站上传，避免同名写入冲突 |
 
 ## 技术雷达
 
@@ -57,27 +62,6 @@
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-</div>
-
-## GitHub 数据
-
-<div align="center">
-  <img
-    width="49%"
-    src="https://github-readme-stats.vercel.app/api?username=Jay0130-a&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&hide=stars,issues&show=prs_merged,prs_merged_percentage&theme=github_dark&bg_color=0D1117&title_color=58A6FF&icon_color=7EE787&text_color=C9D1D9"
-    alt="GitHub stats"
-  />
-  <img
-    width="49%"
-    src="https://streak-stats.demolab.com?user=Jay0130-a&theme=github-dark-blue&hide_border=true&background=0D1117&stroke=30363D&ring=2EA043&fire=F2CC60&currStreakLabel=58A6FF&sideLabels=C9D1D9&dates=8B949E"
-    alt="GitHub streak"
-  />
-  <br />
-  <img
-    width="100%"
-    src="https://github-readme-activity-graph.vercel.app/graph?username=Jay0130-a&bg_color=0D1117&color=C9D1D9&line=2EA043&point=58A6FF&area_color=1F6FEB&area=true&hide_border=true&custom_title=Contribution%20Activity"
-    alt="Contribution activity"
-  />
 </div>
 
 ## 项目
